@@ -1,0 +1,48 @@
+.container {
+    position: relative;
+    padding-top: 100px;
+    text-align: center;
+    border: 3px solid green;
+    padding-bottom: 100px;
+    width: 50%; 
+    height: 100%;
+    margin: 0 auto;
+}
+
+.submit {
+    position: absolute;
+    margin-top: 20px;
+    background-color: #04AA6D;
+    border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.talk {
+    text-align: center;
+    font-size: 50px;
+    color: red;
+    font-weight: bolder;
+}
+
+.title {
+    font-size:14pt;
+    height:200px;
+}
+
+.inputbox {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0%);
+    font-size:14pt;
+    height:30px;
+    width: 50%;
+    transition: top 0.3, left 0.3s;
+}
+* {
+    font-family: "Courier New";
+  }
