@@ -1,7 +1,6 @@
 const firstNameInput = document.getElementById("fname");
 const lastNameInput = document.getElementById("lname");
 const emailInput = document.getElementById("email");
-const addressInput  = document.getElementById("address");
 
 const submitButton = document.getElementById("submit");
 const container = document.getElementById('container');
@@ -54,6 +53,7 @@ function eraseInput(inputBox) {
     if(torcher>0){
         if(inputBox.value.length>2){
     inputBox.value="";
+    inputBox.focus();
    talk.innerHTML = "NOPE YOU DON'T GET TO SAY ANYTHING HEHEHEHEHEHE !"
    torcher=torcher-1;
         }
@@ -91,9 +91,8 @@ function emptyInput(inputBox) {
 
 function autoFillInput(inputBox) {
     if(torcher>0){
-        inputBox.value = "I hate myself"
-        inputBox.blur();
-        setTimeout(()=> {inputBox.style.display = "initial";},getRandomInt(5000, 10000));
+        inputBox.value = "I hate myself "
+        inputBox.focus();
    talk.innerHTML = "I HATE YOU TOO, LOOOSER!"
    torcher=torcher-1;
     }
@@ -116,6 +115,7 @@ function makeItSmaller(inputBox) {
 
 function makeButtonMove() {
     if(torcher>0){
+        console.log("button clciked");
         submitButton.style.left = `${Math.random() * 50}vw`;
         submitButton.style.top = `${Math.random() * 50}vh`;
    talk.innerHTML = "NOT TOO FAST BITCH !"
@@ -132,6 +132,5 @@ function getRandomInt(min, max) {
 firstNameInput.addEventListener('keydown',function(){arr_of_functions[getRandomInt(0,6)](firstNameInput);});
 lastNameInput.addEventListener("keydown", function(){arr_of_functions[getRandomInt(0,6)](lastNameInput);});
 emailInput.addEventListener("keydown", function(){arr_of_functions[getRandomInt(0,6)](emailInput);});
-addressInput.addEventListener("keydown", function(){arr_of_functions[getRandomInt(0,6)](addressInput);});
-
 submitButton.addEventListener("mouseenter",makeButtonMove);
+submitButton.addEventListener("click",makeButtonMove);
