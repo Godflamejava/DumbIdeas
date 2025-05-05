@@ -8,6 +8,7 @@ const container = document.getElementById('container');
 const talk = document.getElementById('talk');
 const audio1 = document.getElementById('audio1');
 const audio2 = document.getElementById('audio2');
+const form_name = document.getElementById('form_name');
 
 var torcher = getRandomInt(30,100); 
 
@@ -37,7 +38,7 @@ const arr_of_functions = [
         },
          {
          'audio':'submit_again_i_dare_you.wav',
-        "message":"Subit again, I dare you"
+        "message":"Submit again, I dare you"
         },
          {
          'audio':'that_was_pathetic_try_again_worm.wav',
@@ -67,6 +68,7 @@ var new_element = old_element.cloneNode(true);
 old_element.parentNode.replaceChild(new_element, old_element);
 }
 function addCharcter(){
+form_name.innerHTML = "Welcome to Hell hahahahahahahahahahaha"
      audio1.src = "resouces/evil_laugh_2.wav";
       const k = arr_of_character_interaction[getRandomInt(0,9)];
           audio2.src = "resouces/"+k.audio;
